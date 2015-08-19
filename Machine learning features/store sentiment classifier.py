@@ -10,7 +10,7 @@ Aim to train a classifier automatically identifiy review's positive or negative 
 import sys
 sys.path.append("./Preprocessing module/")
 import textprocessing as tp
-import pickle
+import cPickle as pickle
 import itertools
 from random import shuffle
 
@@ -269,7 +269,7 @@ def store_classifier(clf, trainset, filepath):
     classifier = SklearnClassifier(clf)
     classifier.train(trainset)
     # use pickle to store classifier
-    pickle.dump(classifier, open(filepath,'w'))
+    pickle.dump(classifier, open(filepath,'wb'),pickle.HIGHEST_PROTOCOL)
 
 
 

@@ -10,7 +10,7 @@ This module aim to extract review sentiment probability as review helpfulness fe
 import sys
 sys.path.append("./Preprocessing module/")
 import textprocessing as tp
-import pickle
+import cPickle as pickle
 import itertools
 from random import shuffle
 
@@ -87,7 +87,7 @@ def extract_features(dataset):
 
 
 # 4. Load classifier
-clf = pickle.load(open('wac_classifier.pkl'))
+clf = pickle.load(open('wac_classifier.pkl','rb'))
 
 # Testing single review
 dataset=sentiment_review[5:6]
