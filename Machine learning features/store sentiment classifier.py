@@ -303,6 +303,7 @@ for d in dimention:
     trainset = posFeatures[:size_pos] + negFeatures[:size_neg]
     testset = posFeatures[size_pos:] + negFeatures[size_neg:]
 
+
     test, tag_test = zip(*testset)
     print 'BernoulliNB`s accuracy is %f' %score(BernoulliNB())
     print 'MultinomiaNB`s accuracy is %f' %score(MultinomialNB())
