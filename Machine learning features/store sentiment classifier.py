@@ -304,7 +304,6 @@ for d in dimention:
     testset = posFeatures[size_pos:] + negFeatures[size_neg:]
 
     test, tag_test = zip(*testset)
-
     print 'BernoulliNB`s accuracy is %f' %score(BernoulliNB())
     print 'MultinomiaNB`s accuracy is %f' %score(MultinomialNB())
     print 'LogisticRegression`s accuracy is %f' %score(LogisticRegression())
